@@ -1,0 +1,8 @@
+jar {
+    baseName = 'mongodb-driver-app'
+    version = '0.0.1-SNAPSHOT'
+}
+
+dependencies {
+    compile ('org.mongodb:mongodb-driver:3.4.0')
+}

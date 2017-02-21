@@ -1,0 +1,8 @@
+jar {
+    baseName = 'morphia-mongo-app'
+    version = '0.0.1-SNAPSHOT'
+}
+
+dependencies {
+    compile ('org.mongodb.morphia:morphia:1.2.1')
+}

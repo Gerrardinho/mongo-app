@@ -1,0 +1,5 @@
+.gradle
+.idea
+mongodb-driver/build
+morphia/build
+spring-data-mongodb/build

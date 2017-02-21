@@ -1,0 +1,6 @@
+rootProject.name = "mongo-app"
+
+include 'spring-data-mongodb'
+include 'morphia'
+include 'mongodb-driver'
+

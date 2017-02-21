@@ -1,0 +1,54 @@
+buildscript {
+    ext {
+        springBootVersion = '1.4.2.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+allprojects {
+
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: 'groovy'
+    apply plugin: 'org.springframework.boot'
+
+    group = 'mongo-app'
+    version = '0.0.1-SNAPSHOT'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile('com.fasterxml.jackson.datatype:jackson-datatype-jsr310')
+
+        compile('org.springframework.boot:spring-boot-starter-web')
+        compile('org.codehaus.groovy:groovy')
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+    }
+}
+
+subprojects {
+
+}
+
+project(':spring-data-mongodb') {
+
+    jar {
+        baseName = 'spring-data-mongo-app'
+        version = '0.0.1-SNAPSHOT'
+    }
+
+    dependencies {
+        compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+        compile('org.springframework.boot:spring-boot-starter-data-rest')
+    }
+}
